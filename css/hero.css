@@ -1,0 +1,31 @@
+.hero{
+    padding: 120px 12px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    place-items: center;
+}
+
+.hero-text h1{
+    font-size: 2.66rem;
+    margin-bottom: var(--mg-bottom);
+}
+
+.hero-text p{
+    font-size: 0.90rem;
+    margin-bottom: var(--mg-bottom);
+}
+
+@media (min-width:1042px){
+    .hero{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .hero-text h1{
+        font-size: 4rem;
+    }
+
+    .hero-text p{
+        font-size: 1.11rem;
+    }
+}

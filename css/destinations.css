@@ -1,0 +1,118 @@
+.destinations{
+    padding: 60px 12px;
+}
+
+.destinations > h2,h3{
+    text-align: center;
+    margin-bottom: var(--mg-bottom);
+}
+
+.col-1-card{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 2rem;
+    margin-bottom: var(--mg-bottom);
+}
+
+.card{
+    position: relative;
+    overflow: hidden;
+}
+
+.col-1-card > .card img{
+    transition: .4s;
+}
+
+.col-2-card > .card img{
+    transition: .4s;
+    border-radius: 5px;
+}
+
+
+
+.col-1-card > .card::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #0000002f;
+    inset: 0;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.text-bottom{
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+}
+
+
+.text-bottom h3{
+    color: #fff;
+    font-weight: bolder;
+}
+
+.col-2-card{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    place-items: center;
+}
+
+
+.col-2-card > .card::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #00000044;
+    inset: 0;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.col-2-card > .card > .text-bottom h3 {
+    font-size: 1.77rem;
+    
+}
+
+.col-1-card > .card:is(:hover,:focus) img{
+    transform: scale(1.1);
+}
+
+.col-2-card > .card:is(:hover,:focus) img{
+    transform: scale(1.1);
+}
+
+
+.col-2-card > .card > .text-bottom h3{
+    color: #fff;
+    font-size: 1.111rem;
+}
+
+.col-2-card > .card > .text-bottom > .color-text{
+   font-size: 1.45rem;
+}
+
+
+
+@media (min-width:1042px) {
+    .col-1-card{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .col-2-card{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .col-2-card > .card{
+        width: 380px;
+        height: 150px;
+    }
+}

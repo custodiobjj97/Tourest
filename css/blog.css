@@ -1,0 +1,22 @@
+.blog{
+    padding: 120px 12px;
+}
+
+.blog > h2{
+    text-align: center;
+    font-size: 2.66rem;
+}
+
+.grid-blogs{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    place-items:center ;
+}
+
+
+@media (min-width:1042px){
+    .grid-blogs{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
